@@ -34,6 +34,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
     this.subs.push(this.movie.getTrending().subscribe(data => {
       this.trending = data;
+      console.log(this.trending.results);
       // @ts-ignore: Object is possibly 'null'.
       this.headerBGUrl = 'https://image.tmdb.org/t/p/original' + this.trending.results[0].backdrop_path;
     }));
